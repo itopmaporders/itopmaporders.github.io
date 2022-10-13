@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>geoserver发布地图服务注意点v1.0</title>
+</head>
+<body><h1 id='geoserver发布地图服务注意点v10'>geoserver发布地图服务注意点v1.0</h1>
+<ul>
+<li>发布PNG格式的地图</li>
+
+</ul>
+<p>选择栅格数据源下的<strong>ImageMosaic格式</strong>发布</p>
+<ul>
+<li>连接参数(指选择对应数据源文件)</li>
+
+</ul>
+<p><strong>文件应当先上传至服务器</strong>, 无法通过在线传输形式上传(windows使用远程桌面和共享文件夹的方式)</p>
+<ul>
+<li>SRS处理</li>
+
+</ul>
+<p>选择<strong>强制声明</strong></p>
+<ul>
+<li>瓦片加载方式</li>
+
+</ul>
+<p>最新版本geoserver生成瓦片直接加载至内存中, 可以自定义瓦片生成路径</p>
+<ul>
+<li>缩放级别的设置</li>
+
+</ul>
+<p>根据数据本身特点而定, 级别设置过高产生的级别属于假的缩放级别, 会导致生产瓦片时间长, cpu占用率高等问题</p>
+<hr />
+<p><strong>相关链接</strong></p>
+<p><a href=''>如何用geoserver发布shp文件</a><a href='https://www.bilibili.com/video/BV1tK4y1g7dW/?spm_id_from=333.788'>第三课 使用GeoServer发布shapefile文件<em>哔哩哔哩</em>bilibili</a></p>
+<p><a href='[第四课 使用GeoServer发布GeoTIFF影像_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1nX4y1P7s7/?spm_id_from=333.788)'>如何用geoserver发布tiff文件</a></p>
+<p><a href='[第七课 使用geoserver生产wmts瓦片_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1kT4y197h6/?spm_id_from=333.788)'>如何生产瓦片</a></p>
+<p><a href='[qgis修改geoserver图层样式_yuqizzp的博客-CSDN博客_geoserver修改样式](https://blog.csdn.net/qq_45697944/article/details/122187152)'>修改图层样式</a></p>
+<p>&nbsp;</p>
+</body>
+</html>
