@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>AppBar宽度固定, 占据整个屏幕</title>
+</head>
+<body><h1 id='appbar宽度固定-占据整个屏幕'>AppBar宽度固定, 占据整个屏幕</h1>
+<ol start='' >
+<li><p>修改operations.js</p>
+<pre><code class='language-javascript' lang='javascript'>export function watchShowFlag() {
+    changeVMainStyle()
+    changeMapContainerStyle()
+    changeArrowButtonStyle()
+    // AppBar宽带固定, 不需要更新appBarStyle
+    // data.state.appBarStyle = changeAppStyle()
+}
+
+export function changeAppStyle() {
+    if (data.state.leftCardShowFlag) {
+        // AppBarStyle不需要修改
+        // return {&#39;z-index&#39;: 999, left: &#39;350px&#39;}
+        return {&#39;z-index&#39;: 999, left: &#39;0px&#39;}
+    } else {
+        if (data.state.navigationShowFlag) {
+            // AppBarStyle不需要修改
+            // return {&#39;z-index&#39;: 999, left: &#39;256px&#39;}
+            return {&#39;z-index&#39;: 999, left: &#39;0px&#39;}
+        } else {
+            // AppBarStyle不需要修改
+            // return {&#39;z-index&#39;: 999, left: &#39;0px&#39;}
+            return {&#39;z-index&#39;: 999, left: &#39;0px&#39;}
+        }
+    }
+}
+</code></pre>
+<p>&nbsp;</p>
+</li>
+
+</ol>
+</body>
+</html>

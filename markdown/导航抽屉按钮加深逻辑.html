@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>导航抽屉按钮加深逻辑</title>
+</head>
+<body><h1 id='导航抽屉按钮加深逻辑'>导航抽屉按钮加深逻辑</h1>
+<p>修改DrawerToggle.vue</p>
+<pre><code class='language-javascript' lang='javascript'>change(event) {
+        // store.commit(&#39;changeNavigationShowFlag&#39;, !this.navigationShowFlag)
+        this.navigationShowFlag = !this.navigationShowFlag;
+        let target = event.target;
+        console.log(target.nodeName);
+        if(target.nodeName == &quot;I&quot;){
+            target = event.target.parentNode.parentNode;
+        }
+        target.blur();
+      },
+</code></pre>
+<p>&nbsp;</p>
+</body>
+</html>
